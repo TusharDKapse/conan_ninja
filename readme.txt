@@ -11,19 +11,6 @@ python -m venv conan-venv
  [Windows-PowerShell] conan-venv/Scripts/Activate.ps1
 
  python -m pip install conan
- python -m pip install cmake
-
-For Windows
-Install https://github.com/msys2/msys2-installer/releases/download/2025-12-13/msys2-x86_64-20251213.exe
-
-Open MSYS2 UCRT64 APP (Terminal)
-$ pacman -S mingw-w64-ucrt-x86_64-gcc
-$ pacman -S mingw-w64-ucrt-x86_64-make
-
-In sytem envionment variable update path variable with C:\msys64\ucrt64\bin
-
-For Linux
-sudo apt install build-essentials
 
 conan create . -s os=Linux -s arch=x86_64
 conan create . -s os=Windows -s arch=x86_64
